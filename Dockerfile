@@ -1,4 +1,5 @@
-FROM alpine
+FROM alpine:latest
+MAINTAINER Jamie Magee "jamie.magee@gmail.com"
 
 RUN apk -U add ca-certificates \
  && rm -rf /var/cache/apk/*
