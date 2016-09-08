@@ -29,5 +29,5 @@ Interactive configuration:
 
 ```bash
 mkdir config
-/usr/bin/docker run --rm -it -v "$PWD"/config:/config/.rclone.conf pschmitt/rclone config
+/usr/bin/docker run --rm -it -v "$PWD"/config:/config pschmitt/rclone config
 ```
