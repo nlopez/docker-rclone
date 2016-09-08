@@ -1,4 +1,4 @@
-[![](https://imagelayers.io/badge/kevineye/rclone:latest.svg)](https://imagelayers.io/?images=kevineye/rclone:latest 'Get your own badge on imagelayers.io')
+[![](https://imagelayers.io/badge/pschmitt/rclone:latest.svg)](https://imagelayers.io/?images=pschmitt/rclone:latest 'Get your own badge on imagelayers.io')
 
 From [rclone.org](http://rclone.org):
 
@@ -19,24 +19,15 @@ Rclone is a command line program to sync files and directories to and from
 
 ## Docker
 
-Show help message:
+Run it (displays version info):
 
-    /usr/bin/docker run --rm \
-        kevineye/rclone \
-        rclone --help
+```bash
+/usr/bin/docker run --rm pschmitt/rclone
+```
 
 Interactive configuration:
 
-    touch rclone.conf
-    /usr/bin/docker run --rm -it \
-        -v "$PWD"/rclone.conf:/root/.rclone.conf \
-        kevineye/rclone \
-        rclone config
-
-Example Dropbox sync:
-
-    /usr/bin/docker run --rm \
-        -v "$PWD"/rclone.conf:/root/.rclone.conf \
-        -v /path/to/Dropbox:/data \
-        kevineye/rclone \
-        rclone sync dropbox:/ /data
+```bash
+mkdir config
+/usr/bin/docker run --rm -it -v "$PWD"/config:/config/.rclone.conf pschmitt/rclone config
+```
