@@ -2,11 +2,13 @@ FROM alpine:3.4
 
 MAINTAINER Philipp Schmitt <philipp@schmitt.co>
 
+ENV RCLONE_VERSION=v1.33
+
 RUN apk -U add ca-certificates \
     && rm -rf /var/cache/apk/* \
     && cd /tmp \
-    && wget -q http://downloads.rclone.org/rclone-current-linux-amd64.zip \
-    && unzip /tmp/rclone-current-linux-amd64.zip \
+    && wget -q http://downloads.rclone.org/rclone-${RCLONE_VERSION}-linux-amd64.zip \
+    && unzip /tmp/rclone-${RCLONE_VERSION}-linux-amd64.zip \
     && mv /tmp/rclone-*-linux-amd64/rclone /usr/bin \
     && rm -r /tmp/rclone* \
     && addgroup rclone \
