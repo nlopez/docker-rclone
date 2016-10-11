@@ -19,6 +19,6 @@ USER rclone
 
 VOLUME ["/config"]
 
-ENTRYPOINT ["/usr/bin/rclone"]
+ENTRYPOINT ["/usr/bin/rclone", "--config", "/config/.rclone.conf"]
 
 CMD ["--version"]
