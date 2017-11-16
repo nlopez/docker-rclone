@@ -5,8 +5,7 @@ MAINTAINER Philipp Schmitt <philipp@schmitt.co>
 ENV RCLONE_VERSION=current
 ENV ARCH=amd64
 
-RUN apk -U add ca-certificates fuse \
-    && rm -rf /var/cache/apk/* \
+RUN apk --no-cache add ca-certificates fuse wget \
     && cd /tmp \
     && wget -q http://downloads.rclone.org/rclone-${RCLONE_VERSION}-linux-${ARCH}.zip \
     && unzip /tmp/rclone-${RCLONE_VERSION}-linux-${ARCH}.zip \
