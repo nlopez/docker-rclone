@@ -1,8 +1,8 @@
-FROM alpine:3.5
+FROM alpine:3.8
 
-MAINTAINER Philipp Schmitt <philipp@schmitt.co>
+MAINTAINER Nick Lopez <nlopez@gmail.com>
 
-ENV RCLONE_VERSION=current
+ENV RCLONE_VERSION=1.45
 ENV ARCH=amd64
 
 RUN apk --no-cache add ca-certificates fuse wget \

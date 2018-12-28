@@ -1,4 +1,4 @@
-[![](https://imagelayers.io/badge/pschmitt/rclone:latest.svg)](https://imagelayers.io/?images=pschmitt/rclone:latest 'Get your own badge on imagelayers.io')
+[![](https://imagelayers.io/badge/nlopez/rclone:latest.svg)](https://imagelayers.io/?images=nlopez/rclone:latest 'Get your own badge on imagelayers.io')
 
 From [rclone.org](http://rclone.org):
 
@@ -22,12 +22,12 @@ Rclone is a command line program to sync files and directories to and from
 Run it (displays version info):
 
 ```bash
-/usr/bin/docker run --rm pschmitt/rclone
+/usr/bin/docker run --rm nlopez/rclone
 ```
 
 Interactive configuration:
 
 ```bash
 mkdir config
-/usr/bin/docker run --rm -it -v "$PWD"/config:/config pschmitt/rclone config
+/usr/bin/docker run --rm -it -v "$PWD"/config:/config nlopez/rclone config
 ```
